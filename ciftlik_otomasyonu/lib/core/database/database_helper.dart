@@ -1,4 +1,12 @@
 // ignore_for_file: unnecessary_string_interpolations
+//onCreate metodu ile veritabanı oluşturulurken veri tabanında bulunması gereken tabloları olusturur.
+//getAnimals metodu veri tabanında kayıtlı olan hayvanları getırır.
+//getChıcken,getCow gıbı metodlar ıse veritaabanından id si verilen hayvanları getiriyor.  
+//addChıcken,addCow gıbı metodlar ıse veritabanına hayvan ekleme işlemi yapar.
+//ChıckenCount,CowCount gıbı methodlar çiftlikte bulunan toplam tavuk veya ınek sayısını getırır.
+//getTotalProduct metodu çiftlikte uretilen urunlerın mıktarını getırıyor.
+//delete bir hayvanı silmeye deleteAll butun hayvanları sılmeye yarar.
+
 
 import 'package:ciftlik_otomasyonu/core/models/other_animal_model.dart';
 import 'package:sqflite/sqflite.dart';
@@ -10,7 +18,7 @@ import 'package:ciftlik_otomasyonu/core/models/sheep_model.dart';
 //Uygulamanın veritabanı için oluşturulan sınıf, bu sınıf içerisindeki işlemler ile veritabanına ekleme, çıkarma, güncelleme işlemleri
 //yapılabılabilir.
 //Veritabanından veri çekmek için de bu sınıf kullanılacak
-//Bu sınıf bir singleton sınıfıdır. Bu sayede sınıfın kendi içerisinde sınıfın kendi türünden bir nesne bulunacak ve
+//Bu sınıf  bir singleton sınıfıdır. Bu sayede sınıfın kendi içerisinde sınıfın kendi türünden bir nesne bulunacak ve
 //sınıfın yükümlü olduğu tüm işlemlerde bu nesne çağırılacak.
 //singleton sınıfından bır tane nesne uretırlıyor.
 class AnimalDatabase {
