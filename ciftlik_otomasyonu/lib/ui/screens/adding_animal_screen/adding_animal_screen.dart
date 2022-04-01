@@ -8,6 +8,11 @@ import '../../../core/models/cow_model.dart';
 import '../../../core/models/sheep_model.dart';
 import '../../widgets/drawer_widget/drawer_widget.dart';
 
+//bu sayfa Listingscreen de sol altta bulunan butona tıklayarak erişilen sayfadır.veri tabanına yenı bır haycan eklenebılır.
+//sayfanın en uzerınde DropdownButton wıdgetı bulunur, tıklandıgında bır menu acılır ve burdan eklemek ıstedıgımız hayvanın turunu secebılırız.
+//butonun hemen altında 6 adet TextFıeld bulunur.ve bunlara eklenmek ıstenılen hayvanların bılgılerı gırılır. id, yas,ası vb. gibi.
+//bilgiler girildikten sonra alttakı butona tıklayarak veritabanına kaydedılır.
+
 class AddingAnimalScreen extends StatefulWidget {
   const AddingAnimalScreen({Key? key}) : super(key: key);
 
