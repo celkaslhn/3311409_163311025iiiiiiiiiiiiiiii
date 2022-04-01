@@ -1,5 +1,9 @@
 import 'package:ciftlik_otomasyonu/core/models/animal_model.dart';
 
+//databaseye tavuk eklemek ıcın chıckenmodelden nesne olusturup id barkod gıbı ozellıklerını verıyoruz.
+//toJson ıle Jsondan bir ture cevırıp dataabseye kaydedıyoruz. 
+//veriyi databaseden alırken  Json olarak alıyoruz bunu nesneye cevırmek gerekıyor.
+//fromJson metodu Jsondan gelen chıcken model nesnesı olusturmayı saglıyor.
 //veritabanında tavukların tutulacağı tablo için sabit bir tablo adı tanımı.
 const String tableChickens = 'chickens';
 
