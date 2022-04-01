@@ -11,6 +11,10 @@ import '../../widgets/drawer_widget/drawer_widget.dart';
 import 'components/product_pie_chart.dart';
 import 'components/total_animals_chart.dart';
 
+//getData() metodu totalEgg,totalMılk,totalWool ve totalOther değişkenlerine veritabanından gelen verileri atamakla sorumludur.
+//
+
+
 class InformationScreen extends StatefulWidget {
   const InformationScreen({Key? key}) : super(key: key);
 
