@@ -6,6 +6,10 @@ import '../information_screen/information_screen.dart';
 import '../listing_screen/listing_screen.dart';
 import '../settings_screen/settings_screen.dart';
 
+//ekrana görsellik katma amacıyla olusturulmus header widgeti,iki adet TextField widgeti ve bir butondan olusur.
+//changeTextFıeldValue metodu kullanıcının gırdıgı degerlerı ilgili değişkenlere atamakla sorumludur.
+//setUserOrAdmın metodu kullanıcının gırdıgı degerın admın mı user mı  oldugunu kontrol eder.
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
