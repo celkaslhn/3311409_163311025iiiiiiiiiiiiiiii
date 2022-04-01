@@ -12,6 +12,7 @@ import 'package:ciftlik_otomasyonu/core/models/sheep_model.dart';
 //Veritabanından veri çekmek için de bu sınıf kullanılacak
 //Bu sınıf bir singleton sınıfıdır. Bu sayede sınıfın kendi içerisinde sınıfın kendi türünden bir nesne bulunacak ve
 //sınıfın yükümlü olduğu tüm işlemlerde bu nesne çağırılacak.
+//singleton sınıfından bır tane nesne uretırlıyor.
 class AnimalDatabase {
   static final AnimalDatabase instance = AnimalDatabase._init();
   static Database? _database;
@@ -19,7 +20,7 @@ class AnimalDatabase {
   AnimalDatabase._init();
 
   //dönüş değeri olarak veritabanını döndürür.
-  //eğer veritabanı henüz oluşturulmamışsa _initDatabase çağırılacak ve böylece veritabanı oluşturulacak.
+  //eğer veritabanı henüz oluşturulmamışsa _initDatabase çağırılacak (nesne olusturlacak) ve böylece veritabanı oluşturulacak.
   Future<Database> get database async {
     if (_database != null) return _database!;
     _database = await _initDatabase('animalssss.db');
@@ -36,10 +37,12 @@ class AnimalDatabase {
   //Database oluşturulurken çalışır.
   //Burada veritabanında oluşturulmasını istediğimiz tabloları oluşturuyoruz.
   //Tavuklar, inekler ve koyunlar için birer tablo oluşturuldu.
+  //yukarıdakı getdatabase metodu ıcerısınde cagrılır
+ 
   Future _onCreate(Database db, int version) async {
     await db.execute(''' 
       CREATE TABLE $tableChickens(
-        ${ChickenFields.id} INTEGER PRIMARY KEY AUTOINCREMENT,
+        ${ChickenFields.id} INTEGER PRIMARY KEY AUTOINCREMENT,  
         ${ChickenFields.barkod} TEXT NOT NULL,
         ${ChickenFields.yas} TEXT NOT NULL,
         ${ChickenFields.yem} TEXT NOT NULL,
@@ -94,10 +97,14 @@ class AnimalDatabase {
   //tavukların tamamnını liste olarak getirir.
   Future<List<ChickenModel>> getChickens() async {
     final dbClient = await instance.database;
+    //dbClıent ıcıne ddatabaseın ılk ornegı atanır.
 
     const orderBy = '${ChickenFields.id} DESC';
+    //orderBY sıralama ıcın dgerler girilir.(tavuklar id sine gore Azalarak gıder)
     final chickens = await dbClient.query(tableChickens, orderBy: orderBy);
+    //bir sorgu olusturulup istenılen degeger getırılır mesela tavuk gelmıs.
     return chickens.map((c) => ChickenModel.fromJson(c)).toList();
+    //chıckenmodel tarafından her bırı ıcın nesne turetılır ve nesnenın ıcıne fromJson ıle ozellıkler atanır.(ıd barkod...).
   }
 
   //ineklerin tamamnını liste olarak getirir.
@@ -170,6 +177,8 @@ class AnimalDatabase {
   }
 
   //tavuk ekleme
+  //tavugun bılgılerını chıckenmodele dondurur.bu işi toJson modelı ıle yapar.
+  //dbClıent.query dekı kısım bır sorgu calıstırır ve id ye ait tavugu bulur.
   Future<ChickenModel> addChicken(ChickenModel chicken) async {
     final dbClient = await database;
     final id = await dbClient.insert(tableChickens, chicken.toJson());
