@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 
+//ıcerısınde oldukları wıdgetlerı tutuyorlaara.
+
 class LabelInformationRow extends StatelessWidget {
   const LabelInformationRow({
     Key? key,
