@@ -1,6 +1,11 @@
 import "package:flutter/material.dart";
 
 //ıcerısınde oldukları wıdgetlerı tutuyorlaara.
+//labelınformatıon bir veriyi gostermek ıcın bır wıdgettır.
+//kurucu parametre olarak bır label(etiket) ve informatıon(bilgi) verisi alır
+//iki veride String tipindedir.
+//ardından aldığı ıkı verıyı Row wıdgetı ıle arayuze yansıtır.
+                
 
 class LabelInformationRow extends StatelessWidget {
   const LabelInformationRow({
