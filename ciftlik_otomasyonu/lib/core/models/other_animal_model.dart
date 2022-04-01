@@ -1,3 +1,7 @@
+//veritabanında tavuklar,inekler,koyunlar ıcın birer tablo acıldı.fakat kullanıcı bunlar dısında hayvan eklemek ısteyebilir.
+//bunun ıcın othermodel yazılmıstır.
+//bu model ıle verıtabanına çeşitli hayvanlar eklenebilir.
+
 import 'package:ciftlik_otomasyonu/core/models/animal_model.dart';
 
 const String tableOthers = 'others';
