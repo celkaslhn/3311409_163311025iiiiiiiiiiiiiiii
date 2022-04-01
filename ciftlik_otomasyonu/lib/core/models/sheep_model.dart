@@ -1,3 +1,12 @@
+//veritabanına veri eklerken model sınıflarından yaralanırız.
+//bu sınıflar,kaydedılecek bılgılerı temsıl eden degıskenler,veritabanına dosyayı kaydederken kullanılacak toJson() ve
+//veritabanından veri çekerken kullanılan fromJson() meethodları içerir.
+//veri tabanında veriyi Json() denılen formatta tutarız ve olusturulan modelin içerdiği bilgileri Json()a cevırerek verı tabanına kaydedıyoruz.
+//toJson metodu bu yuzden mevcuttur.
+//fromJson metodu ıse, veritabanından json ıle gelen verıyı kullanacagımız modele cevırıp veriyi kullanmamızı saglar.
+//veri tabanında verılerı tablolarda tutuyoruz. bu ornekte de adını tablesheeps değişkenınde tutuyoruz.
+//Sheepfıeld ıse tablo ıcerısındekı tutulacak verılerı temsil etmektedır.yem, yas, barkod...
+
 import 'animal_model.dart';
 
 //veritabanında koyunların tutulacağı tablonun adı
@@ -7,7 +16,7 @@ const String tableSheeps = 'sheeps';
 class SheepFields {
   static const String id = '_id';
   static const String barkod = 'Barkod';
-  static const String yas = 'Yas';
+  static const String
   static const String yem = 'Yem';
   static const String aylikYun = 'AylikYun';
   static const String gubre = 'Gubre';
