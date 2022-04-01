@@ -10,6 +10,11 @@ import '../../widgets/drawer_widget/drawer_widget.dart';
 import '../adding_animal_screen/adding_animal_screen.dart';
 import 'components/animal_list.dart';
 
+//sol altta bulunan FloatıngActıonButton wıdgetı yenı bır hayvan eklemek ıcın kulllanılır.
+//bu tona tıklayınca hayvan ekleme sayfasına gonderılır.
+// getData() metodu veritabanından gelen verılerı ilgili değişkenlere atar.
+
+
 class ListingScreen extends StatefulWidget {
   const ListingScreen({Key? key}) : super(key: key);
 
