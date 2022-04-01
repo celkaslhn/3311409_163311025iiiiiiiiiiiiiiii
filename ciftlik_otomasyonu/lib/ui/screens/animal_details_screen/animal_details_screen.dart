@@ -8,6 +8,11 @@ import '../../../core/models/cow_model.dart';
 import '../../../core/models/sheep_model.dart';
 import 'components/label_information_row.dart';
 
+// Bu sayfa listıngscreen sayfasındakı hayvanların herhangı bırıne tıklanarak gelınen sayfadır.
+//tıklanılan hayvanın cınsıne gore verıtabanında tutulan bılgııler gozukur.
+//sayfaya parametre olarak gırılen hayvan modelının hangıhayvana aıt oldugu ıle ılgılı kontroller( anımal ıs cowModel) gibi sayfa
+//içersinde belirli yerlerde yapılır.
+
 class AnimalDetailsScreen extends StatefulWidget {
   const AnimalDetailsScreen({Key? key, this.animal}) : super(key: key);
   final dynamic animal;
