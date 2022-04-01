@@ -6,7 +6,12 @@ import 'package:ciftlik_otomasyonu/ui/screens/listing_screen/listing_screen.dart
 import 'package:ciftlik_otomasyonu/ui/screens/settings_screen/settings_screen.dart';
 import "package:flutter/material.dart";
 
-//Uygulamada sol taraftaki menünün tanımlandığı kısım
+//Uygulamada sol taraftaki menünün tanımlandığı kısım bunun sayesınde ıstenılen sayfaya ulasılabılıyor.
+//liste içerinde sayfaların adları ve ıkonları bulunuyor tıklanılarak gıdılebılır.
+//bir sayfadan dıger sayfaya gecmek ıcın Navigator.push metodu kullanılır.parametre olarak context ve MaterialPageRoute alan bu method
+// MaterialPageRoute içinde verilen sayfaya yönlendirilir.
+
+
 class DrawerScreen extends StatefulWidget {
   const DrawerScreen({Key? key}) : super(key: key);
 
